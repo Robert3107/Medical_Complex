@@ -1,0 +1,15 @@
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/WebSecurityConfiguration.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/entity/Visit.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/visit/VisitImplementationService.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/user/UserService.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/entity/Specialist.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/visit/VisitRepository.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/entity/User.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/user/UserImplementationService.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/specialist/SpecialistRepository.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/user/UserRepository.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/specialist/SpecialistService.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/visit/VisitService.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/controller/HomeController.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/model/service/specialist/SpecialistImplementationService.java
+/home/robert_ubuntu/Projekty/Medical_Complex/src/main/java/pl/medicalcomplex/app/MedicalComplexApplication.java
