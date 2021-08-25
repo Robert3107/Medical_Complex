@@ -19,8 +19,8 @@ public class SpecialistImplementationService implements SpecialistService {
     }
 
     @Override
-    public void createSpecialist(Specialist specialist) {
-        specialistRepository.save(specialist);
+    public Specialist createSpecialist(Specialist specialist) {
+       return specialistRepository.save(specialist);
     }
 
     @Override

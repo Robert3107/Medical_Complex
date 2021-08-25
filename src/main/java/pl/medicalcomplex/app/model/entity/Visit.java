@@ -1,5 +1,6 @@
 package pl.medicalcomplex.app.model.entity;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "visits")
+@Data
 public class Visit {
 
     @Id
@@ -27,83 +29,4 @@ public class Visit {
     @OneToOne
     private Specialist specialist;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDate getVisitDate() {
-        return visitDate;
-    }
-
-    public void setVisitDate(LocalDate visitDate) {
-        this.visitDate = visitDate;
-    }
-
-    public LocalTime getVisitTime() {
-        return visitTime;
-    }
-
-    public void setVisitTime(LocalTime visitTime) {
-        this.visitTime = visitTime;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getPostaCode() {
-        return postaCode;
-    }
-
-    public void setPostaCode(String postaCode) {
-        this.postaCode = postaCode;
-    }
-
-    public String getVisitCost() {
-        return visitCost;
-    }
-
-    public void setVisitCost(String visitCost) {
-        this.visitCost = visitCost;
-    }
-
-    public boolean isArchive() {
-        return isArchive;
-    }
-
-    public void setArchive(boolean archive) {
-        isArchive = archive;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Specialist getSpecialist() {
-        return specialist;
-    }
-
-    public void setSpecialist(Specialist specialist) {
-        this.specialist = specialist;
-    }
 }

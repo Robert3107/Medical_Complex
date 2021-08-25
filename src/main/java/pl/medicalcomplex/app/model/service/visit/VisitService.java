@@ -9,12 +9,12 @@ public interface VisitService {
 
     List<Visit> getVisits();
 
-    void createVisit(Visit visit);
+    Visit createVisit(Visit visit);
 
     Optional<Visit> getVisitId(long id);
 
     void updateVisit(Visit visit);
 
-    void archiveVisit(Visit visit);
+    Visit archiveVisit(Visit visit);
 
 }

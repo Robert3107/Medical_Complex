@@ -9,7 +9,7 @@ public interface SpecialistService {
 
     List<Specialist> getSpecialists();
 
-    void createSpecialist(Specialist specialist);
+    Specialist createSpecialist(Specialist specialist);
 
     Optional<Specialist> getSpecialistById(long id);
 

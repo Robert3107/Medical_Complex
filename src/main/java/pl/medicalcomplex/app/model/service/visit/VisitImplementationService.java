@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 @AllArgsConstructor
-public class VisitImplementationService implements VisitService{
+public class VisitImplementationService implements VisitService {
 
     private final VisitRepository visitRepository;
 
@@ -19,8 +19,8 @@ public class VisitImplementationService implements VisitService{
     }
 
     @Override
-    public void createVisit(final Visit visit) {
-        visitRepository.save(visit);
+    public Visit createVisit(final Visit visit) {
+        return visitRepository.save(visit);
     }
 
     @Override
@@ -30,15 +30,16 @@ public class VisitImplementationService implements VisitService{
 
     @Override
     public void updateVisit(Visit visit) {
-        if (visitRepository.existsById(visit.getId())){
+        if (visitRepository.existsById(visit.getId())) {
             visitRepository.save(visit);
         }
     }
 
     @Override
-    public void archiveVisit(Visit visit) {
-        if (visitRepository.existsById(visit.getId())){
+    public Visit archiveVisit(Visit visit) {
+        if (visitRepository.existsById(visit.getId())) {
             visit.setArchive(true);
         }
+        return visit;
     }
 }
