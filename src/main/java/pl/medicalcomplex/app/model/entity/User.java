@@ -35,7 +35,7 @@ public class User {
     private String phoneNumber;
     @NotNull
     @NotBlank(message = "Pole nie może być puste")
-    private Long PESEL;
+    private String pesel;
     @NotNull
     @NotBlank(message = "Pole nie może być puste")
     private String address;
@@ -46,7 +46,8 @@ public class User {
     @NotBlank(message = "Pole nie może być puste")
     private String city;
 
-    public void hashPassword(String password) {
+    public void setPassword(String password) {
         this.password = BCrypt.hashpw(password, BCrypt.gensalt());
+
     }
 }

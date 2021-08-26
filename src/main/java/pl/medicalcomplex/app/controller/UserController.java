@@ -22,6 +22,7 @@ public class UserController {
 
     @PostMapping("/add")
     public User addUser(@RequestBody User user) {
+        user.setPassword(user.getPassword());
         return userImplementationService.createUser(user);
     }
 

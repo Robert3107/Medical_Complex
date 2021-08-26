@@ -92,7 +92,7 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-    <img src="resources/images/background.jpg" alt="boat" style="width:60%;display: block;margin-bottom: auto;margin-left: auto;margin-right: auto">
+    <img src="${pageContext.request.contextPath}/images/background.jpg" alt="boat" style="width:60%;display: block;margin-bottom: auto;margin-left: auto;margin-right: auto">
 </div>
 
 <!-- Team Container -->

@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/visit")
+@RequestMapping("/visits")
 public class VisitController {
 
     private final VisitImplementationService visitImplementationService;
