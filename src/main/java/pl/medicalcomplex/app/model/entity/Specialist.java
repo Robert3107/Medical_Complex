@@ -1,11 +1,15 @@
 package pl.medicalcomplex.app.model.entity;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.UniqueElements;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "specialists")
@@ -24,8 +28,28 @@ public class Specialist {
     @NotNull
     private String specialization;
     @NotNull
+    private String numberPWZ;
+    @NotNull
     @Size(min = 10)
+    @NotBlank(message = "Pole nie może być puste")
+    @Column(unique = true)
+    private String email;
+    @NotNull
+    @Size(min = 5)
+    @NotBlank(message = "Pole nie może być puste")
+    private String password;
+    @NotNull
+    @NotBlank(message = "Pole nie może być puste")
+    private String phoneNumber;
+    @NotNull
     private String description;
-    private String opinion;
+
+    @OneToMany
+    private List<VisitOpinion> opinions = new ArrayList<>();
+
+    public void hashPassword(String password) {
+        this.password = BCrypt.hashpw(password, BCrypt.gensalt());
+
+    }
 
 }

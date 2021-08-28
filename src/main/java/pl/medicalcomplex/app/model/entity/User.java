@@ -7,6 +7,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -46,7 +48,10 @@ public class User {
     @NotBlank(message = "Pole nie może być puste")
     private String city;
 
-    public void setPassword(String password) {
+    @OneToMany
+    private List<VisitOpinion> opinions = new ArrayList<>();
+
+    public void hashPassword(String password) {
         this.password = BCrypt.hashpw(password, BCrypt.gensalt());
 
     }

@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.medicalcomplex.app.model.entity.Specialist;
-import pl.medicalcomplex.app.model.service.specialist.SpecialistImplementationService;
+import pl.medicalcomplex.app.model.repository.SpecialistRepository;
 
 import java.util.List;
 
@@ -13,21 +13,31 @@ import java.util.List;
 @RequestMapping("/specialist")
 public class SpecialistController {
 
-    private final SpecialistImplementationService specialistImplementationService;
+    //TODO dodać wskazywanie widoków i ich zwracanie
+    private final SpecialistRepository specialistRepository;
 
     @GetMapping("/all")
     public List<Specialist> getAllSpecialist() {
-        return specialistImplementationService.getSpecialists();
+        return specialistRepository.findAll();
     }
 
     @PostMapping("/add")
     public Specialist addSpecialist(@RequestBody Specialist specialist) {
-        return specialistImplementationService.createSpecialist(specialist);
+        specialist.hashPassword(specialist.getPassword());
+
+        return specialistRepository.save(specialist);
     }
 
-    @PostMapping("/delete")
-    public ResponseEntity<Specialist> deleteSpecialist(@RequestBody Long id) {
-        specialistImplementationService.deleteSpecialistById(id);
+    @PostMapping("/edit")
+    public Specialist editSpecialist(@RequestBody Specialist specialist) {
+        specialistRepository.findById(specialist.getId());
+
+        return specialistRepository.save(specialist);
+    }
+
+    @PostMapping("/delete/{id}")
+    public ResponseEntity<Specialist> deleteSpecialist(@PathVariable Long id) {
+        specialistRepository.deleteById(id);
 
         return ResponseEntity.ok().build();
     }

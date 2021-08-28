@@ -3,7 +3,7 @@ package pl.medicalcomplex.app.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import pl.medicalcomplex.app.model.entity.Visit;
-import pl.medicalcomplex.app.model.service.visit.VisitImplementationService;
+import pl.medicalcomplex.app.model.repository.VisitRepository;
 
 import java.util.List;
 
@@ -12,21 +12,30 @@ import java.util.List;
 @RequestMapping("/visits")
 public class VisitController {
 
-    private final VisitImplementationService visitImplementationService;
+    private final VisitRepository visitRepository;
 
     @GetMapping("/all")
     public List<Visit> getAllVisits() {
-        return visitImplementationService.getVisits();
+        return visitRepository.findAll();
     }
 
     @PostMapping("/add")
     public Visit addVisit(@RequestBody Visit visit) {
-        return visitImplementationService.createVisit(visit);
+        return visitRepository.save(visit);
     }
 
-    @PostMapping("/archive")
-    public Visit archiveVisit(@RequestBody Visit visit) {
-        return visitImplementationService.archiveVisit(visit);
+    @PostMapping("/edit")
+    public Visit editVisit(@RequestBody Visit visit) {
+        visitRepository.findById(visit.getId());
+
+        return visitRepository.save(visit);
+    }
+
+    @PostMapping("/closeVisit/{id}")
+    public Visit archiveVisit(@PathVariable Long id) {
+        Visit visit = visitRepository.findById(id).get();
+        visit.setEndVisit(true);
+        return visitRepository.save(visit);
 
     }
 

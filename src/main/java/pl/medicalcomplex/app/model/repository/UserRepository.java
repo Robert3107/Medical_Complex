@@ -1,4 +1,4 @@
-package pl.medicalcomplex.app.model.service.user;
+package pl.medicalcomplex.app.model.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
