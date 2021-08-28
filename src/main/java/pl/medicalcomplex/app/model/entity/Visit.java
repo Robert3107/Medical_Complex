@@ -30,6 +30,8 @@ public class Visit {
     @NotNull
     private LocalTime visitTime;
     @NotNull
+    private String outpost;
+    @NotNull
     private String address;
     @NotNull
     private String city;
@@ -38,6 +40,5 @@ public class Visit {
     @NotNull
     private String visitCost;
     private boolean endVisit = false;
-
 
 }
