@@ -1,5 +1,6 @@
 package pl.medicalcomplex.app.controller;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/opinions")
+@JsonDeserialize
 public class VisitOpinionController {
 
     private final VisitOpinionRepository visitOpinionRepository;
@@ -25,7 +27,7 @@ public class VisitOpinionController {
         return visitOpinionRepository.save(visitOpinion);
     }
 
-    @GetMapping("/specialist/{firstName}/{lastName}")
+    @GetMapping("/{firstName}/{lastName}")
     private List<VisitOpinion> getSpecialistOpinion(@PathVariable String firstName, @PathVariable String lastName) {
         return visitOpinionRepository.findAllBySpecialist_FirstNameAndSpecialist_LastName(firstName, lastName);
     }

@@ -19,9 +19,10 @@ public class Visit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne(optional = false)
     private User user;
-    @OneToOne
+
+    @ManyToOne(optional = false)
     private Specialist specialist;
 
     @NotNull

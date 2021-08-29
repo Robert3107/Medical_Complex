@@ -49,6 +49,9 @@ public class User {
     private String city;
 
     @OneToMany
+    private List<Visit> visits;
+
+    @OneToMany
     private List<VisitOpinion> opinions = new ArrayList<>();
 
     public void hashPassword(String password) {
