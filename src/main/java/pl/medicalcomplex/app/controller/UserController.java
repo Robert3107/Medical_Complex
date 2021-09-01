@@ -20,7 +20,7 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    @PostMapping("/add")
+    @PostMapping("/register")
     public User addUser(@RequestBody User user) {
         user.hashPassword(user.getPassword());
         return userRepository.save(user);

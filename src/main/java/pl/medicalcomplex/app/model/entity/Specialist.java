@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "specialists")
@@ -43,6 +44,9 @@ public class Specialist {
     private String phoneNumber;
     @NotNull
     private String description;
+
+    @ManyToMany
+    private Set<Role> roles;
 
     @OneToMany
     private List<Visit> visits;

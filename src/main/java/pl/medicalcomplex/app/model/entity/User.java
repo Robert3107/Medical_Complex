@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -47,6 +48,9 @@ public class User {
     @NotNull
     @NotBlank(message = "Pole nie może być puste")
     private String city;
+
+    @ManyToMany
+    private Set<Role> roles;
 
     @OneToMany
     private List<Visit> visits;

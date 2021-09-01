@@ -7,7 +7,7 @@ import pl.medicalcomplex.app.model.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    boolean existsByEmail(String email);
+    User findByFirstName(String firstName);
 
     User findByEmail(String email);
 }
