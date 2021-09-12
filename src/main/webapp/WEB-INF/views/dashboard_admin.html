@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="resources/js/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+<div class="sidebar close">
+    <div class="logo-details">
+        <i class='bx bx-diamond'></i>
+        <span class="logo_name">Medical Complex</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="#">
+                <i class='bx bx-info-circle'></i>
+                <span class="link_name">Information</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Information</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-calendar'></i>
+                    <span class="link_name">Visits</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Visits</a></li>
+                <li><a href="#">Find visit</a></li>
+                <li><a href="#">All visits</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Users</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Users</a></li>
+                <li><a href="#">Find user</a></li>
+                <li><a href="#">All users</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bxs-graduation'></i>
+                    <span class="link_name">Specialists</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Specialists</a></li>
+                <li><a href="#">Find specialist</a></li>
+                <li><a href="#">All specialists</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-clinic' ></i>
+                    <span class="link_name">Institution</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Institution</a></li>
+                <li><a href="#">Find institution</a></li>
+                <li><a href="#">All institution</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-comment-detail'></i>
+                    <span class="link_name">Opinions</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Opinions</a></li>
+                <li><a href="#">All opinions</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bxs-brightness'></i>
+                <span class="link_name">Settings</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Settings</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-line-chart-down'></i>
+                <span class="link_name">Statistics</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Statistics</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-door-open'></i>
+                <span class="link_name">Sign Out</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Sign Out</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="resources/images/avatar.jpg" alt="profileImg">
+                </div>
+                <div class="name-job">
+                    <div class="profile_name">Jan Kowalski</div>
+                    <div class="job">Admin</div>
+                </div>
+                <i class='bx bx-info-circle' ></i>
+            </div>
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <div class="home-content">
+        <i class='bx bx-menu' ></i>
+    </div>
+</section>
+<script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+            arrowParent.classList.toggle("showMenu");
+        });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
+</script>
+</body>
+</html>

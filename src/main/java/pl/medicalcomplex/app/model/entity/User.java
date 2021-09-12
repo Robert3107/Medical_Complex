@@ -25,6 +25,9 @@ public class User {
     @NotNull
     @NotBlank(message = "Pole nie może być puste")
     private String lastName;
+    @NotNull
+    @NotBlank(message = "Pole nie może być puste")
+    private String sex;
     @Column(unique = true)
     @NotNull
     @NotBlank(message = "Pole nie może być puste")

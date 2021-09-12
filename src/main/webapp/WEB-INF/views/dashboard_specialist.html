@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="resources/js/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialist</title>
+</head>
+<body>
+<div class="sidebar close">
+    <div class="logo-details">
+        <i class='bx bx-diamond'></i>
+        <span class="logo_name">Medical Complex</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Account</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Account</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Your opinions</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bx-calendar'></i>
+                    <span class="link_name">Visits</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Visits</a></li>
+                <li><a href="#">Upcoming visits</a></li>
+                <li><a href="#">History of visit</a></li>
+                <li><a href="#">Online visit</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class='bx bxs-user-detail'></i>
+                    <span class="link_name">Patients</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Patients</a></li>
+                <li><a href="#">Your patients</a></li>
+                <li><a href="#">Treatment</a></li>
+                <li><a href="#">Prescriptions</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-door-open'></i>
+                <span class="link_name">Sign Out</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Sign Out</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="resources/images/avatar.jpg" alt="profileImg">
+                </div>
+                <div class="name-job">
+                    <div class="profile_name">Adam Nowak</div>
+                    <div class="job">Patient</div>
+                </div>
+                <i class='bx bx-info-circle' ></i>
+            </div>
+        </li>
+    </ul>
+</div>
+<section class="home-section">
+    <div class="home-content">
+        <i class='bx bx-menu' ></i>
+    </div>
+</section>
+<script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+            arrowParent.classList.toggle("showMenu");
+        });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
+</script>
+</body>
+</html>
