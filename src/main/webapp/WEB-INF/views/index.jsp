@@ -1,11 +1,16 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../resources/js/css/style.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Medical Complex</title>
+    <link rel="stylesheet" href="<c:url value="../../resources/js/css/style.css"/>"/>
 </head>
 <body>
 <div class="sidebar close">
@@ -35,8 +40,12 @@
         <li>
             <div class="profile-details">
                 <div class="name-job">
+                    <a href="https://github.com/Robert3107/Medical_Complex">
                         <i class='bx bxl-github'></i>
-                    <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/robert-jachowicz-846548214/">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
                 </div>
             </div>
         </li>
@@ -46,21 +55,10 @@
     <div class="home-content">
         <i class='bx bx-menu'></i>
     </div>
+    <div class="background">
+        <img src="<c:url value="../../resources/images/background.jpg"/>" alt="Medical Complex" width="100%" height="100%"/>
+    </div>
 </section>
-<script>
-    let arrow = document.querySelectorAll(".arrow");
-    for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e) => {
-            let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-            arrowParent.classList.toggle("showMenu");
-        });
-    }
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".bx-menu");
-    console.log(sidebarBtn);
-    sidebarBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("close");
-    });
-</script>
+<script src="<c:url value="../../resources/js/app.js"/> "></script>
 </body>
 </html>

@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface VisitOpinionRepository extends JpaRepository<VisitOpinion, Long> {
     List<VisitOpinion> findAllBySpecialist_FirstNameAndSpecialist_LastName(String firstName, String lastName);
+
+    List<VisitOpinion> findAllByUserId(long id);
 }

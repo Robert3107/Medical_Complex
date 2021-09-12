@@ -1,6 +1,7 @@
 package pl.medicalcomplex.app.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.medicalcomplex.app.model.entity.Visit;
 import pl.medicalcomplex.app.model.repository.VisitRepository;
@@ -8,7 +9,7 @@ import pl.medicalcomplex.app.model.repository.VisitRepository;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+@Controller
 @RequiredArgsConstructor
 @RequestMapping("/visits")
 public class VisitController {

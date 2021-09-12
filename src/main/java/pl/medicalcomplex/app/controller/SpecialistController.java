@@ -2,13 +2,14 @@ package pl.medicalcomplex.app.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.medicalcomplex.app.model.entity.Specialist;
 import pl.medicalcomplex.app.model.repository.SpecialistRepository;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequiredArgsConstructor
 @RequestMapping("/specialist")
 public class SpecialistController {
