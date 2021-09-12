@@ -24,6 +24,16 @@ The application will allow:
 - schedule of future visits
 - possibility to provide online services
 
+#News 
+
+- Responsive control panel (12.09.2021)
+---
+|   Dashboard On   |    Dashboard Off   |
+|------------------|--------------------|
+|   ![](images/dashboard_on.png)    |   ![](images/dashboard_off.png)   |
+
+
+  
 # Technologies
 
 ___
@@ -40,7 +50,7 @@ ___
 
 # Contact
 
-___
+### Email: robert.jachowicz.kontakt@gmail.com
 
 #### Please add suggestions or contact me if you like my project.
 
