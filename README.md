@@ -24,7 +24,7 @@ The application will allow:
 - schedule of future visits
 - possibility to provide online services
 
-#News 
+# News 
 
 - Responsive control panel (12.09.2021)
 ---
