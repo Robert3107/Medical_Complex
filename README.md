@@ -27,7 +27,7 @@ The application will allow:
 # News 
 
 - Responsive control panel (12.09.2021)
----
+
 |   Dashboard On   |    Dashboard Off   |
 |------------------|--------------------|
 |   ![](images/dashboard_on.png)    |   ![](images/dashboard_off.png)   |
